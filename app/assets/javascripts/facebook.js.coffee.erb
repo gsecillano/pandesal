@@ -8,7 +8,7 @@ jQuery ->
 
 
 window.fbAsyncInit = ->
-  FB.init(appId: '231097457095165', cookie: true)
+  FB.init(appId: '<%= OmniauthKey.instance[:facebook][Rails.env][:app_id] %>', cookie: true)
 
   $('#sign_in').click (e) ->
     e.preventDefault()
