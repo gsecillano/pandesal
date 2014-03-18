@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @customer.email %>
+</p>
+
+<p>
+  <strong>Firstname:</strong>
+  <%= @customer.firstname %>
+</p>
+
+<p>
+  <strong>Lastname:</strong>
+  <%= @customer.lastname %>
+</p>
+
+<p>
+  <strong>Password hash:</strong>
+  <%= @customer.password_hash %>
+</p>
+
+<p>
+  <strong>Salt:</strong>
+  <%= @customer.salt %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @customer.address %>
+</p>
+
+<p>
+  <strong>Registration key:</strong>
+  <%= @customer.registration_key %>
+</p>
+
+<%= link_to 'Edit', edit_customer_path(@customer) %> |
+<%= link_to 'Back', customers_path %>

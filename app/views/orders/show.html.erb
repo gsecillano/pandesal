@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @order.customer_id %>
+</p>
+
+<p>
+  <strong>Pcs:</strong>
+  <%= @order.pcs %>
+</p>
+
+<p>
+  <strong>Unit:</strong>
+  <%= @order.unit %>
+</p>
+
+<p>
+  <strong>Delivery date:</strong>
+  <%= @order.delivery_date %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @order.amount %>
+</p>
+
+<p>
+  <strong>Amount paid:</strong>
+  <%= @order.amount_paid %>
+</p>
+
+<p>
+  <strong>Payment date:</strong>
+  <%= @order.payment_date %>
+</p>
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>
