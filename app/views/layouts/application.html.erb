@@ -12,7 +12,8 @@
     Welcome <strong><%= current_user.firstname %></strong>!
     <%= link_to "Sign out", signout_path, id: "sign_out" %>
   <% else %>
-    <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
+<%#<fb:login-button id="sign_in" max_rows="1" size="xlarge" show_faces="false"></fb:login-button>%>
+<%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
   <% end %>
 </div>
 <%= yield %>
