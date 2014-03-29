@@ -1,3 +1,57 @@
 // Place all the styles related to the orders controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.new_order {
+
+  .form-container {
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 10px 20px;
+    margin-top: 50px;
+    line-height: 18px;
+  }
+
+  .clearfix {
+    clear: both;
+  }
+
+  h3 {
+    float: left;
+  }
+
+  .styled-select {
+    font-size: 33px;
+    float: left;
+  }
+
+  .styled-select {
+    margin: 23px 10px;
+    width: 90px;
+    height: 48px;
+    overflow: hidden;
+    /*background: url(new_arrow.png) no-repeat right #ddd;*/
+    /*background-color: #ddd;*/
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    select {
+      background: transparent;
+      width: 90px;
+      padding: 5px 15px;
+      font-size: 33px;
+      font-weight: bold;
+      text-shadow: 2px 2px 5px #333;
+      color: #fff;
+      line-height: 1;
+      border: 0;
+      border-radius: 5;
+      height: 48px;
+      -webkit-appearance: none;
+    }
+  }
+  .styled-select.date {
+    width: 540px;
+    select {
+      width: 540px;
+    }
+  }
+}

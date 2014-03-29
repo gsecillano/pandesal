@@ -6,16 +6,25 @@ jQuery ->
     dataType: 'script'
     cache: true
 
+appLogin = ->
+  $.ajax
+    url: '/auth/status'
+    statusCode:
+      401: ->
+        window.location = '/auth/facebook/callback'
 
 window.fbAsyncInit = ->
   FB.init(appId: '<%= OmniauthKey.instance[:facebook][:app_id] %>', cookie: true, xfbml: true)
 
-  $('#sign_in').click (e) ->
-    e.preventDefault()
-    FB.login (response) ->
-      window.location = '/auth/facebook/callback' if response.authResponse
+  FB.Event.subscribe 'auth.authResponseChange', (response) ->
+    switch response.status
+      when 'connected' then appLogin()
+      when 'not_authorized' then FB.login()
+      else FB.login()
 
   $('#sign_out').click (e) ->
     FB.getLoginStatus (response) ->
-      FB.logout() if response.authResponse
+      if response.authResponse
+        FB.logout() 
+        window.location = '/'
     true

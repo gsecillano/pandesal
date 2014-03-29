@@ -1,4 +1,8 @@
 class OrdersController < ApplicationController
+
+  before_action do
+    redirect_to root_url unless logged_in?
+  end
   before_action :set_order, only: [:show, :edit, :update, :destroy]
 
   # GET /orders
@@ -15,6 +19,12 @@ class OrdersController < ApplicationController
   # GET /orders/new
   def new
     @order = Order.new
+    @dates = [
+      ["Tomorrow, #{1.day.from_now.in_time_zone('UTC').strftime("%B %d, %Y")}", 1],
+      [2.days.from_now.in_time_zone('UTC').strftime("%A, %B %d, %Y"), 2],
+      [3.days.from_now.in_time_zone('UTC').strftime("%A, %B %d, %Y"), 3],
+      [4.days.from_now.in_time_zone('UTC').strftime("%A, %B %d, %Y"), 4]
+    ]
   end
 
   # GET /orders/1/edit
