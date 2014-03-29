@@ -1,24 +1,14 @@
 body {
-  /*background-color: #fff;*/
-  background-image:asset-url("bg2.png");
-  background-repeat:no-repeat;
-  background-attachment:fixed;
-  background-position:center; 
-  color: #eee;
-  text-shadow: 2px 2px 5px #333;
+  background-color: #fff;
+  color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 33px;
+  font-size: 13px;
   line-height: 18px;
-  padding: 20px
-}
-
-input, select {
-  font-size: 33px
 }
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 33px;
+  font-size: 13px;
   line-height: 18px;
 }
 
@@ -31,11 +21,11 @@ pre {
 a {
   color: #000;
   &:visited {
-    color: #66f;
+    color: #666;
   }
   &:hover {
     color: #fff;
-    /*background-color: #000;*/
+    background-color: #000;
   }
 }
 

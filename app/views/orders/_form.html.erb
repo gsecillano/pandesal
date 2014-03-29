@@ -16,28 +16,20 @@
     <%= f.number_field :customer_id %>
   </div>
   <div class="field">
-    <%= f.label :pcs %><br>
-    <%= f.number_field :pcs %>
+    <%= f.label :start_date %><br>
+    <%= f.date_select :start_date %>
   </div>
   <div class="field">
-    <%= f.label :unit %><br>
-    <%= f.text_field :unit %>
+    <%= f.label :end_date %><br>
+    <%= f.date_select :end_date %>
   </div>
   <div class="field">
-    <%= f.label :delivery_date %><br>
-    <%= f.date_select :delivery_date %>
+    <%= f.label :status %><br>
+    <%= f.text_field :status %>
   </div>
   <div class="field">
-    <%= f.label :amount %><br>
-    <%= f.text_field :amount %>
-  </div>
-  <div class="field">
-    <%= f.label :amount_paid %><br>
-    <%= f.text_field :amount_paid %>
-  </div>
-  <div class="field">
-    <%= f.label :payment_date %><br>
-    <%= f.date_select :payment_date %>
+    <%= f.label :notes %><br>
+    <%= f.text_area :notes %>
   </div>
   <div class="actions">
     <%= f.submit %>

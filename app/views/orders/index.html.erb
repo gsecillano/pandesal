@@ -4,12 +4,10 @@
   <thead>
     <tr>
       <th>Customer</th>
-      <th>Pcs</th>
-      <th>Unit</th>
-      <th>Delivery date</th>
-      <th>Amount</th>
-      <th>Amount paid</th>
-      <th>Payment date</th>
+      <th>Start date</th>
+      <th>End date</th>
+      <th>Status</th>
+      <th>Notes</th>
       <th></th>
       <th></th>
       <th></th>
@@ -20,12 +18,10 @@
     <% @orders.each do |order| %>
       <tr>
         <td><%= order.customer_id %></td>
-        <td><%= order.pcs %></td>
-        <td><%= order.unit %></td>
-        <td><%= order.delivery_date %></td>
-        <td><%= order.amount %></td>
-        <td><%= order.amount_paid %></td>
-        <td><%= order.payment_date %></td>
+        <td><%= order.start_date %></td>
+        <td><%= order.end_date %></td>
+        <td><%= order.status %></td>
+        <td><%= order.notes %></td>
         <td><%= link_to 'Show', order %></td>
         <td><%= link_to 'Edit', edit_order_path(order) %></td>
         <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>

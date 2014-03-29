@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-IWantPandesal::Application.load_tasks
+Pandesal::Application.load_tasks

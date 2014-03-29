@@ -1,4 +1,4 @@
-IWantPandesal::Application.routes.draw do
+Pandesal::Application.routes.draw do
   get "welcome/index"
   resources :orders
 

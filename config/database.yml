@@ -17,9 +17,9 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: i-want-pandesal_development
+  database: pandesal_development
   pool: 5
-  username: i-want-pandesal
+  username: pandesal
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -46,15 +46,15 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: i-want-pandesal_test
+  database: pandesal_test
   pool: 5
-  username: i-want-pandesal
+  username: pandesal
   password:
 
 production:
   adapter: postgresql
   encoding: unicode
-  database: i-want-pandesal_production
+  database: pandesal_production
   pool: 5
-  username: i-want-pandesal
+  username: pandesal
   password:
