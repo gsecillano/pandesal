@@ -1,29 +1,4 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Customer:</strong>
-  <%= @order.customer_id %>
-</p>
-
-<p>
-  <strong>Start date:</strong>
-  <%= @order.start_date %>
-</p>
-
-<p>
-  <strong>End date:</strong>
-  <%= @order.end_date %>
-</p>
-
-<p>
-  <strong>Status:</strong>
-  <%= @order.status %>
-</p>
-
-<p>
-  <strong>Notes:</strong>
-  <%= @order.notes %>
-</p>
-
-<%= link_to 'Edit', edit_order_path(@order) %> |
-<%= link_to 'Back', orders_path %>
+<h3>Thanks for ordering!</h3>
+<%= link_to 'Home', root_url %>

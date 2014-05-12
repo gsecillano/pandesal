@@ -19,12 +19,13 @@ class OrdersController < ApplicationController
   # GET /orders/new
   def new
     @order = Order.new
+    lead = 7
     @dates = [
       ["Tomorrow, #{1.day.from_now.in_time_zone('UTC').strftime("%B %d, %Y")}", 1],
-      [2.days.from_now.in_time_zone('UTC').strftime("%A, %B %d, %Y"), 2],
-      [3.days.from_now.in_time_zone('UTC').strftime("%A, %B %d, %Y"), 3],
-      [4.days.from_now.in_time_zone('UTC').strftime("%A, %B %d, %Y"), 4]
     ]
+    (2..lead).to_a.each do |d|
+      @dates << [d.days.from_now.in_time_zone('UTC').strftime("%A, %B %d, %Y"), d]
+    end
   end
 
   # GET /orders/1/edit

@@ -1,0 +1,5 @@
+<h1>Welcome back!</h1>
+<% if @orders %>
+<% else %>
+  <h4>You currently don't have any orders.  Get your pandesal <%= link_to 'here', new_order_url %>.</h4>
+<% end %>
